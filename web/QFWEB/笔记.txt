@@ -1,0 +1,251 @@
+11、img->单标签
+    src:引入图片地址
+    alt：当图片出现问题时显示
+    title：提示信息
+
+
+跳转连接
+    <base target="_blank">
+
+
+跳转锚点
+    id属性 #
+    name属性 #
+
+
+特殊符号
+    &nbsp
+
+
+列表标签
+    1、无须列表 - > ul li 符合嵌套的规范
+    2、有序列表 - > ol li 可以用无须列表来实现
+    3、定义列表 - > dl dt dd 列表项需要添加标题和对标题进行描述的内容
+    <dl>
+        <dt>title</dt>
+        <dd>ddddd</dd>
+    </dl>
+
+
+
+表格标签
+    <table>:表格最外层容器
+    <tr>行  <th>头  <td>表格单元
+    <caption>表格标题
+
+    语义化标签：tHead  tBody    tFood
+    tips：在一个table里，tBody可以使用多次，但是thead和tFoot只能出现一次
+
+
+
+表格属性
+    border
+    cellpadding：单元格内的空间
+    cellspacing：单元格之间的空间
+    rowspan：合并行
+    colspan：合并列
+    align：左右对齐方式 left center right
+    valign：上下对齐方式 top middle bottom
+
+
+
+表单标签、
+    <form><input>
+     form ation="www.111.com"
+     placeholder:提示词
+
+    textarea：多行文本框clos rowspan：合并行
+    select、option  selected disabled
+    multiple多选可在input或select中
+
+    lable辅助表单 for对应input里的id
+
+
+引入外部样式
+    1、link
+
+
+css背景
+    background-attachment：（背景图随滚动条滚动的方式）
+                            scroll（默认值，背景位置是按照当前元素进行偏移）
+                            fixed（不随滚动条滚动，背景位置是按照浏览器进行偏移）
+
+
+2、css边框样式
+    border-style：边框样式
+    dashed：虚线
+    dotted：点线
+    solid：实线
+    颜色：透明颜色 transparent
+
+
+4、css段落样式？
+    text-decoration:文本装饰
+
+    text-transform:文本大小写（针对英文段落）
+        小写：lowercase
+        大写：uppercase
+        首字母大写：capitalize
+
+    text-index：文本缩进
+        首行缩进
+        em单位：相对单位，1em永远是跟字体大小相同
+
+    text-align：文本对齐方式
+        left、right、center、justify（两端点对齐
+        
+        0
+        
+        ）
+
+    line-height：定义行高
+
+    letter-spacing：字之间的间距
+    word-spacing：词之间的间距    
+
+
+    英文和数字不自动折行的问题：
+        1、word-break：break-all；（非常强烈的折行，长单词分开）
+        2、word-wrap：break-word；（不是。。。。。，会产生一些空白区域）
+
+    
+
+5、css复合样式
+
+    1.background:             无须关心
+    2.border：                顺序问题
+    3.font:
+        注：最少要有两个值 size family
+            weight style size family
+            style weight size family
+            weight style size/line-heighe family
+    注：混写时，先写符合样式，再写单一样式
+
+
+6、选择器
+
+    1.层次选择器
+        后代    M N { }
+        父子    M > N { }
+        兄弟    M ~ N { }   当前M下所有的兄弟N 
+        相邻    M + N { }   当前M相邻的N标签 
+
+    2.属性选择器
+
+        M[attr] { }     例：    div[class][id]
+        =  完全匹配
+        *=  部分匹配 
+        ^=  起始匹配
+        $=  结束匹配
+        [][][]  多个[]进行组合匹配
+
+
+    3.伪类选择器
+        M:伪类{}
+        :link           访问前的样式    （ 只能添加给a标签 ）
+        ：visited       访问后的样式    （ 只能添加给a标签 ）
+        ：hover         鼠标移入时的样式（可以添加给所有的标签）
+        ：active        鼠标按下时的样式（可以添加给所有的标签）
+
+        注：
+            一般的网站都只设置
+                a{} （ link visited active ）   a:hover{}
+
+        ：after、   ：before    通过伪类的方式给元素添加一段文本内容，使用content属性
+        ：checked、 ：disabled、    ：focus都是针对表单元素的
+
+        结构性伪类选择器
+           li: nth-of-type(2n+1){background:red}    --隔行换色
+
+           :nth-of-type()       :nth-child()
+           :first-of-type()     :first-child()
+           :last-of-type()      :laat-child()
+           :only-of-type()      :only-child()
+           区别：   type ：类型
+                    child：孩子
+
+
+
+
+    7、css继承
+        文字相关的样式可以被继承
+        布局相关的样式不能被继承（默认时不能被继承的，但是可以设置继承属性：inherit 值）
+        例： p{ border:inherit; }
+
+
+    
+    8、css优先级
+
+        1.相同样式优先级
+            当设置相同样式时，后面的优先级较高，但不建议重复出现设置样式的情况
+        2.内部样式与外部样式
+            内部样式与外部的样式优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高。
+        3.单一样式优先级
+            style行间 > id > class > tag > * > 继承
+
+            注：style行间   权重    1000
+                id          权重    100
+                class       权重    10
+                yag         权重    1
+        4.  ！import 
+            提升样式优先级，非规范方式，不建议使用。（不能针对继承的属性进行优先级的提升）
+
+        5.标签+类与单类
+            标签+类 > 单类
+
+        6.群组优先级
+        群组选择器与单一选择器的优先级相同，靠后写的优先级高。
+
+        7.层级优先级
+           1）权重比较：
+            ul li .box p input{}    1 + 1 + 10 + 1 + 1
+            .hello span #elem{}     10 + 1 + 100
+
+           2）约分比较
+             ul li .box p input{}       ul li input{}
+             .hello span #elem{}        #elem{}
+
+
+    9.css盒子模型
+        
+        组成：content -> padding -> border -> margin
+                物品     填充物     包装盒      盒子与盒子之间的间距
+
+    box-sizing：：
+        盒尺寸，可以改变盒子模型的展示形态
+        默认值：content-box ： width、height -> content
+        border-box ： width、height -> content padding border
+
+        使用场景
+            1.不在去计算一些值
+            2.解决一些100%的问题
+
+        盒子模型的问题：
+            1.margin叠加问题，出现在上下margin同时存在的时候
+            2.margin传递问题，只有margin-top会有
+                解决方案：
+                        1、BFC规范  2、给父容器加边框   3、margin换成padding
+        
+    拓展：
+        1.margin：auto左右自适应时可以的，但是上下自适应不行
+        2.width、height不设置的时候，对盒子模型的影响会自动去计算容器的大小，节省代码。
+
+
+
+
+    10.标签分类
+        按类型
+            block：div、 p、 ul、 li、 h1……
+                1.独占一行
+                2.支持所有样式
+                3.不写宽的时候，跟父元素的宽相同
+                4.所占区域时一个矩形
+            
+            inline：span、 a、 em、 strong、 img、···
+                1.挨在一起的
+                2.有些样式不支持，例如：width、height、margin、padding
+                3.不写宽的时候，跟父元素的宽相同
+                4.所占的区域不一定时矩形
+                
+
+        

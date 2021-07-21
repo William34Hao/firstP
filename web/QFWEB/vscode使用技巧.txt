@@ -1,0 +1,13 @@
+ctrl + z/y  撤销/前进
+
+shift + home/end    从头/尾部选中一行
+
+shift + alt + ↓\↑   快速复制一行
+
+alt + ↑/↓       快速移动一行
+
+tab     向后缩进
+shift + tab 向前缩进
+
+多光标： alt
+ctrl + d：选择相同元素的下一个
