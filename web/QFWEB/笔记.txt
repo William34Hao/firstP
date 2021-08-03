@@ -246,6 +246,40 @@ css背景
                 2.有些样式不支持，例如：width、height、margin、padding
                 3.不写宽的时候，跟父元素的宽相同
                 4.所占的区域不一定时矩形
-                
+        按内容
+            Flow：流内容
+            Metadata：元数据
+            Sectioning：分区
+            Heading：标题
+            Phrasing：措辞
+            Embedded：嵌入的
+            Interactive：互动的
+            （详情：https://www.w3.org/TR/html5/dom/html5)
+
+        按显示
+            替换元素：浏览器根据元素的标签和属性，来决定元素的具体显示内容。
+                img、input……
+            非替换元素：将内容直接告诉浏览器，将其显示出来。
+                div、h1、p……
+
+
+    11.显示框类型
+
+        display：block inline inline-block none ……
+
+        区别：
+        display：none   不占空间的隐藏
+        visibility：hidden 占空间的隐藏    
+
+
+    12.标签嵌套规范
+
+        ul li
+        dl dt dd
+        table tr td
+
+        块能够嵌套内联
+            
+
 
         
