@@ -118,7 +118,7 @@ css背景
         注：最少要有两个值 size family
             weight style size family
             style weight size family
-            weight style size/line-heighe family
+            weight style size/line-height family
     注：混写时，先写符合样式，再写单一样式
 
 
@@ -279,7 +279,58 @@ css背景
         table tr td
 
         块能够嵌套内联
+
+12、溢出隐藏
+
+    overflow：
+            visible：默认
+            hidden
+            scroll
+            auto
+            x轴、y轴
+                overflow-x、overflow-y针对两个轴分别设置
+
+13.透明度与手势
+
+    opacity：0（透明）~ 1（不透明）
+        0.5（半透明）
+
+        注：占空间、所有的子内容也会透明
+
+    rgba() ：0 ~ 1
+        注：可以让指定的样式透明，而不影响其他样式
+
+
+    cursor：手势
+        default： 默认箭头
+        要实现自定义手势
+            准备图片：  .cur    .ico
+            cursor:url(./img/cursor.ico),auto
+
+
+14.最大、最小宽高
+
+    min-width、min-height
+    max-width、max-height
             
+    %单位； 换算 -> 以父容器的大小进行换算的
+
+    一个容器怎么使用屏幕的搞：容器加height：100%；body：100%；html：100%
+
+        html,body{height:100%;}
+        .contrainer{height:100%;}
 
 
-        
+15.css默认样式
+
+    没有默认样式的：div、span
+
+    有默认样式的：
+
+        body -> margin : 8px
+        h1 -> margin : 上下 21.440px
+              font-weight ： bold
+        p -> margin：上下16px
+        ui -> margin：上下 16px     padding：左 40px
+              默认点：list-style：disc
+        a -> text-decoration：underline；
