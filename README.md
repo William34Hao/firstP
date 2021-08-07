@@ -1,1 +1,1 @@
-https://www.williamhao.top/Notes.txt
+[笔记](https://www.williamhao.top/Notes.txt)
